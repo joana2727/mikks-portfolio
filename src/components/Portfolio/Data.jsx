@@ -1,30 +1,14 @@
-import Content1 from "../../assets/content1.webp";
-import Content2 from "../../assets/content2.webp";
-import Content3 from "../../assets/content3.webp";
-import Content4 from "../../assets/content4.webp";
-import Content5 from "../../assets/content5.webp";
-import Content6 from "../../assets/content6.webp";
-import Content7 from "../../assets/content7.webp";
-import Ppt1 from "../../assets/Ppt1.webp";
-import Ppt2 from "../../assets/Ppt2.webp";
-import Ppt3 from "../../assets/Ppt3.webp";
-import Ppt4 from "../../assets/Ppt4.webp";
-import Ppt5 from "../../assets/Ppt5.webp";
-import Pic1 from "../../assets/pic1.jpg"
-import Pic2 from "../../assets/pic2.jpg"
-import Pic3 from "../../assets/pic3.jpg"
-import Pic5 from "../../assets/pic5.jpg"
-import Pic6 from "../../assets/pic6.jpg"
-import Pic7 from "../../assets/pic7.jpg"
-import Pic8 from "../../assets/pic8.jpg"
-import Pic9 from "../../assets/pic9.jpg"
-import Ui1 from "../../assets/Ui1.png"
-import Gd1 from "../../assets/Gd1.png"
-import Gd2 from "../../assets/Gd2.png"
-import Gd3 from "../../assets/Gd3.png"
-import Gd4 from "../../assets/Gd4.png"
-import Gd5 from "../../assets/Gd5.png"
+// Helper function to import all files from a folder
+const importAll = (requireContext) => {
+  return requireContext.keys().reduce((images, file) => {
+    const fileName = file.replace('./', ''); // Get file name without './'
+    images[fileName] = requireContext(file); // Add to the images object
+    return images;
+  }, {});
+};
 
+// Import all images from the assets folder
+const contentImages = importAll(require.context('../../assets/portfolio', false, /\.(webp|jpg|png)$/));
 
 
 export const projectsData = [
@@ -32,7 +16,7 @@ export const projectsData = [
   // Contents
   {
     id: 1,
-    image: Content1,
+    image: contentImages['content1.webp'],
     title: "UGC | Athena",
     category: "contents",
     text: "Product showcase",
@@ -40,7 +24,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    image: Content2,
+    image: contentImages['content2.webp'],
     title: "UGC | Bath & Body Works",
     category: "contents",
     text: "Product showcase",
@@ -48,7 +32,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    image: Content3,
+    image: contentImages['content3.webp'],
     title: "UGC | Careline",
     category: "contents",
     text: "Product showcase and usage",
@@ -56,7 +40,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    image: Content4,
+    image: contentImages['content4.webp'],
     title: "Event | SM Cinema",
     category: "contents",
     text: "Experience and call to action",
@@ -64,7 +48,7 @@ export const projectsData = [
   },
   {
     id: 5,
-    image: Content5,
+    image: contentImages['content5.webp'],
     title: "Promotion | Paping's Staycation",
     category: "contents",
     text: "Experience and call to action",
@@ -72,7 +56,7 @@ export const projectsData = [
   },
   {
     id: 6,
-    image: Content6,
+    image: contentImages['content6.webp'],
     title: "Promotion | Prive Beaute Aesthetics",
     category: "contents",
     text: "Experience",
@@ -80,7 +64,7 @@ export const projectsData = [
   },
   {
     id: 7,
-    image: Content7,
+    image: contentImages['content7.webp'],
     title: "Event | Beaucon Manila 2024",
     category: "contents",
     text: "Event Experience",
@@ -88,7 +72,7 @@ export const projectsData = [
   },
   {
     id: 8,
-    image: Content7,
+    image: contentImages['content8.png'],
     title: "Event | Huawei Tech with Love",
     category: "contents",
     text: "Event Experience",
@@ -96,8 +80,8 @@ export const projectsData = [
   },
   {
     id: 9,
-    image: Content7,
-    title: "Event | Huawei Tech with Love",
+    image: contentImages['content9.png'],
+    title: "Event | Fairy Skin on Mega Beautycon",
     category: "contents",
     text: "Event Experience",
     link: "https://www.instagram.com/reel/DCOpQgUSAas/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -106,7 +90,7 @@ export const projectsData = [
 //  Presentations
 {
     id: "A1",
-    image: Ppt1,
+    image: contentImages['Ppt1.webp'],
     title: "Region 1 Template",
     category: "presentations",
     text: "Editable morph presentation using MS PPT",
@@ -114,7 +98,7 @@ export const projectsData = [
   },
   {
     id: "A2",
-    image: Ppt2,
+    image: contentImages['Ppt2.webp'],
     title: "El Filibusterismo Template",
     category: "presentations",
     text: "Editable morph presentation using MS PPT",
@@ -122,7 +106,7 @@ export const projectsData = [
   },
   {
     id: "A3",
-    image: Ppt5,
+    image: contentImages['Ppt5.webp'],
     title: "Brand Introduction",
     category: "presentations",
     text: "Morph presentation using MS PPT",
@@ -130,7 +114,7 @@ export const projectsData = [
   },
   {
     id: "A4",
-    image: Ppt4,
+    image: contentImages['Ppt4.webp'],
     title: "Earthquake Preparedness Template",
     category: "presentations",
     text: "Morph presentation using MS PPT",
@@ -138,7 +122,7 @@ export const projectsData = [
   },
   {
     id: "A5",
-    image: Ppt3,
+    image: contentImages['Ppt3.webp'],
     title: "Noli Me Tangere Template",
     category: "presentations",
     text: "Editable morph presentation using MS PPT",
@@ -148,49 +132,49 @@ export const projectsData = [
   // Photography
   {
     id: "B1",
-    image: Pic1,
+    image: contentImages['pic1.jpg'],
     category: "photography",
     text: "Product photography",
   },
   {
     id: "B3",
-    image: Pic3,
+    image: contentImages['pic3.jpg'],
     category: "photography",
     text: "Product photography",
   },
   {
     id: "B4",
-    image: Pic5,
+    image: contentImages['pic5.jpg'],
     category: "photography",
     text: "UGC photography",
   },
   {
     id: "B5",
-    image: Pic6,
+    image: contentImages['pic6.jpg'],
     category: "photography",
     text: "UGC photography",
   },
   {
     id: "B6",
-    image: Pic7,
+    image: contentImages['pic7.jpg'],
     category: "photography",
     text: "UGC photography",
   },
   {
     id: "B7",
-    image: Pic8,
+    image: contentImages['pic8.jpg'],
     category: "photography",
     text: "Product Photography",
   },
   {
     id: "B8",
-    image: Pic9,
+    image: contentImages['pic9.jpg'],
     category: "photography",
     text: "Product Photography",
   },
   {
     id: "B9",
-    image: Pic2,
+    image: contentImages['pic2.jpg'],
     category: "photography",
     text: "UGC Photography",
   },
@@ -199,7 +183,7 @@ export const projectsData = [
 // UI
 {
   id: "C1",
-  image: Ui1,
+  image: contentImages['Ui1.png'],
   title: "Mobile App UI",
   category: "ui",
   text: "UI for a sample application",
@@ -209,7 +193,7 @@ export const projectsData = [
 // Graphic Designs
 {
   id: "D1",
-  image: Gd1,
+  image: contentImages['Gd1.png'],
   title: "Poster",
   category: "graphic designs",
   text: "Mayon Volcano Poster",
@@ -217,34 +201,34 @@ export const projectsData = [
 },
 {
   id: "D2",
-  image: Gd2,
+  image: contentImages['Gd2.png'],
   title: "Zine",
   category: "graphic designs",
-  text: "",
+  text: "Zine with short poems",
   link: "https://www.canva.com/design/DAGJBna738E/cZJMRPR6378N5ygtKrht0Q/view?utm_content=DAGJBna738E&utm_campaign=designshare&utm_medium=link&utm_source=editor",
 },
 {
   id: "D3",
-  image: Gd3,
+  image: contentImages['Gd3.png'],
   title: "Meme Poster",
   category: "graphic designs",
-  text: "",
+  text: "CS student meme poster",
   link: "https://www.canva.com/design/DAGWRRp8IY4/tvxclj9UwAwpuLAmtOPUig/view?utm_content=DAGWRRp8IY4&utm_campaign=designshare&utm_medium=link&utm_source=editor",
 },
 {
   id: "D4",
-  image: Gd4,
+  image: contentImages['Gd4.png'],
   title: "Portfolio",
   category: "graphic designs",
-  text: "",
+  text: "Museum visit portolfio",
   link: "https://www.canva.com/design/DAFobHrIS58/RVpejMJhskXgN4yxhaBhaA/view?utm_content=DAFobHrIS58&utm_campaign=designshare&utm_medium=link&utm_source=editor",
 },
 {
   id: "D5",
-  image: Gd5,
+  image: contentImages['Gd5.png'],
   title: "Meme Poster",
   category: "graphic designs",
-  text: "",
+  text: "CS student meme poster",
   link: "https://www.canva.com/design/DAGWRf-WqIQ/_WEK9Cxo3TkVq3RF4tdBbw/view?utm_content=DAGWRf-WqIQ&utm_campaign=designshare&utm_medium=link&utm_source=editor",
 },
 ];
