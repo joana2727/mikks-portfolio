@@ -9,7 +9,7 @@ const ScrollUp = () => {
     else scrollUp.classList.remove("show-scroll");
   });
   return (
-    <a href="#home" className="scrollup">
+    <a href="#home" className="scrollup" alt="Scroll Up" aria-label="Click to Scroll Up to the Top of the Page">
       <i className="uil uil-arrow-up scrollup__icon"></i>
     </a>
   );
