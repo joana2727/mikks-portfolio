@@ -8,7 +8,8 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noopener noreferrer"
-        alt="Mikks' Instagram"
+        alt="Mikks' Instagram Account"
+        aria-label="View Mikks' Instagram Account Profile"
       >
         <i className="uil uil-instagram"></i>
       </a>
@@ -18,7 +19,8 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noopener noreferrer"
-        alt="Mikks' Tiktok"
+        alt="Mikks' Tiktok Account"
+        aria-label="View Mikks' Tiktok Account Profile"
       >
         <i className="uil uil-music-note"></i>
       </a>
@@ -28,7 +30,8 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noopener noreferrer"
-        alt="Mikks' Facebook"
+        alt="Mikks' Facebook Account"
+        aria-label="View Mikks' Facebook Account Profile"
       >
         <i className="uil uil-facebook-f"></i>
       </a>
@@ -38,7 +41,8 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noopener noreferrer"
-        alt="Mikks' Raket PH"
+        alt="Mikks' Raket PH Account"
+        aria-label="View Mikks' Raket PH Profile"
       >
         <i className="uil uil-rocket"></i>
       </a>

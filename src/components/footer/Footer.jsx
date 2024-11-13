@@ -36,6 +36,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer" 
             alt="Mikks' Instagram"
+            aria-label="View Mikks' Instagram Profile"
           >
             <i className="uil uil-instagram"></i>
           </a>
@@ -46,6 +47,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="Mikks' Tiktok"
+            aria-label="View Mikks' Tiktok Profile"
           >
             <i className="uil uil-music-note"></i>
           </a>
@@ -56,6 +58,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="Mikks' Facebook"
+            aria-label="View Mikks' Facebook Profile"
           >
             <i className="uil uil-facebook-f"></i>
           </a>
@@ -66,6 +69,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="Mikks' Raket PH"
+            aria-label="View Mikks' Raket Profile"
           >
             <i className="uil uil-rocket"></i>
           </a>
